@@ -1,1 +1,10 @@
-<p>slider works!</p>
+<ngb-carousel *ngIf="imageProductList">
+  <ng-template ngbSlide *ngFor="let image of imageProductList">
+    <div class="picsum-img-wrapper">
+      <img [src]="image.src">
+    </div>
+  </ng-template>
+</ngb-carousel>
+
+
+

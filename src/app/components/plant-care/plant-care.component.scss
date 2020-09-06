@@ -1,0 +1,31 @@
+.container-fluid {
+  background-color: #f8f8f7;
+  margin: 64px 0 0;
+  padding: 64px 32px;
+
+  h2 {
+    margin: 24px 0;
+    font-size: 2.62rem;
+  }
+
+  h5{
+    font-size: .75rem;
+  }
+
+  p {
+    max-width: 260px;
+  }
+
+  img {
+    width: 48px;
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .container-fluid {
+    p{
+     max-width: 100%;
+    }
+  }
+}

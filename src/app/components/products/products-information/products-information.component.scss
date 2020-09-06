@@ -1,0 +1,21 @@
+.price-product {
+  display: flex;
+  justify-content: space-between;
+
+  h2 {
+    width: 60%;
+    font-size: 2.62rem;
+  }
+
+  a {
+    font-size: 2.62rem;
+    font-weight: 500;
+    cursor: pointer;
+  }
+}
+
+.description-product{
+  h5 {
+    font-size: .75rem;
+  }
+}

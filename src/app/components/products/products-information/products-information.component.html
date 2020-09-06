@@ -1,1 +1,21 @@
-<p>products-information works!</p>
+<div>
+  <div class="price-product">
+    <h2>Marble Queen Pothos</h2>
+    <a (click)="changeCurrency()" *ngIf="changePrice === false">
+      {{price | currency:'USD': 'symbol':'1.0'}}
+    </a>
+    <a (click)="changeCurrency()" *ngIf = "changePrice === true">
+      {{eurPrice |currency: 'EUR'}}
+    </a>
+  </div>
+  <div class="description-product">
+    <p>
+      Give your home office an upgrade! The Photos Marble and its quick growing vines full of variegated green and white
+      leaves will make any space look more lush. It is a great low maintenance choice for beginners.
+    </p>
+
+    <h5>NOTE</h5>
+
+    <p>Arrives in a nursery grow pot nestled inside our ceramic planter.</p>
+  </div>
+</div>

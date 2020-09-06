@@ -1,0 +1,92 @@
+h5 {
+  font-size: .75rem;
+}
+
+form {
+   .size-product {
+    margin-top: 16px;
+
+    label {
+      cursor: pointer;
+      margin-right: 15px;
+
+      &:visited, &:active{
+        text-decoration: underline #3E3832;
+    }
+      &:after{
+
+      }
+    }
+
+    input {
+      display: none;
+    }
+  }
+
+  .colors-product {
+    margin: 24px 0 0 0;
+    padding: 16px 0 0 0;
+    border-top: 1px solid #d7d2cb;
+
+    label {
+      margin: 0 15px;
+      cursor: pointer;
+
+      &:visited, &:active{
+        text-decoration: underline #3E3832;
+      }
+    }
+
+    input {
+      display: none;
+    }
+
+    .colors {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+
+      &.colors_black {
+        background-color: #3E3832;
+      }
+
+      &.colors_blush {
+        background-color: #FFD2B7;
+      }
+
+      &.colors_cream {
+        background-color: #EEE7DB;
+      }
+
+      &.colors_mint {
+        background-color: #CEE0DE;
+      }
+
+      &.colors_gray {
+        background-color: #DCD7CB;
+      }
+
+      &.colors_terracotta {
+        background-color: #C38364;
+      }
+    }
+  }
+
+  button {
+    width: 371px;
+    height: 57px;
+    color: #FFFFFF;
+    background-color: #00ab84;
+    font-size: 1rem;
+    border: none;
+    margin: 24px 0;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  form {
+    button {
+      width: 100%;
+    }
+  }
+}

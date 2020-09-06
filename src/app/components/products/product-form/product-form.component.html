@@ -1,1 +1,55 @@
-<p>product-form works!</p>
+<div>
+  <h5>PLANTER STYLE</h5>
+  <form [formGroup]="productForm" (ngSubmit)="submit(productForm)">
+    <div>
+      <select class="form-control" formControlName="typeProducts" (change)="checkProductType($event)" >
+
+        <option  *ngFor="let product of typesProducts" [value]="product.type">
+          {{product.type}}
+        </option>
+      </select>
+    </div>
+
+    <div class="size-product">
+      <h5>SIZE</h5>
+      <label for="small">Small</label>
+      <input type="radio" id="small" value="small" formControlName="sizeProduct">
+
+      <label for="medium">Medium</label>
+      <input type="radio" id="medium" value="medium" formControlName="sizeProduct">
+    </div>
+
+    <div class="colors-product">
+      <h5>PLANTER COLOR</h5>
+      <label for="black"><p class="colors colors_black"></p> Black</label>
+      <input type="radio" id="black" value="black" formControlName="colorProduct">
+
+      <label for="blush"><p class="colors colors_blush"></p>Blush</label>
+      <input type="radio" id="blush" value="blush" formControlName="colorProduct">
+
+      <label for="cream"><p class="colors colors_cream"></p>Cream</label>
+      <input type="radio" id="cream" value="cream" formControlName="colorProduct">
+
+      <label for="mint"><p class="colors colors_mint"></p>Mint</label>
+      <input type="radio" id="mint" value="mint" formControlName="colorProduct">
+
+      <label for="gray"><p class="colors colors_gray"></p>Pale Gray</label>
+      <input type="radio" id="gray" value="gray" formControlName="colorProduct">
+
+      <label for="terracotta"><p class="colors colors_terracotta"></p>Terracotta</label>
+      <input type="radio" id="terracotta" value="terracotta" formControlName="colorProduct">
+    </div>
+
+    <button type="submit">
+      <span *ngIf="currencyType === 'usd'">
+        {{price | currency: 'USD': 'symbol':'1.0'}} -
+      </span>
+      <span *ngIf="currencyType === 'eur'">
+        {{price | currency: 'EUR'}}
+        - </span>
+      Add to Cart</button>
+  </form>
+</div>
+
+
+

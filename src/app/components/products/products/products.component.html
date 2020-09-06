@@ -1,1 +1,18 @@
-<p>products works!</p>
+<app-header></app-header>
+
+<div class="container products">
+  <div class="row">
+    <div class="col-12 col-md-6">
+      <app-slider [typeProduct]="typeProduct"></app-slider>
+    </div>
+    <div class="col-12 col-md-6">
+      <app-products-information [price]="priceProduct"
+                                (checkTypeCurrency)="saveCurrency($event)"
+      ></app-products-information>
+      <app-product-form [currency]="saveCurrencyType"
+                        (type)="checkProductType($event)"
+                        (priceData)="checkPriceProduct($event)"
+      ></app-product-form>
+    </div>
+  </div>
+</div>
